@@ -23,6 +23,7 @@ public class AIController : MonoBehaviour, IPaddleMover
     private void FixedUpdate()
     {
         var ballDirection = Vector3.Dot(_target.velocity.normalized, Vector3.right);
+        MoveDirection = 0;
         if (ballDirection >= 0)
         {
             var ray = new Ray(_target.position, _target.velocity);
